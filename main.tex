@@ -1,0 +1,88 @@
+% \documentclass{report}
+\documentclass[12pt, a4paper]{article}
+\usepackage{anysize}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{wrapfig}
+\usepackage{pbox}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\usepackage{listings}
+\usepackage{minted}
+\usemintedstyle{borland}
+
+
+
+\pagenumbering{gobble}
+
+\title{ \textbf{SAFE: Smart Authenticated Fast Exams for Student Evaluation in Classrooms} \\
+\vspace{1cm}  \normalsize{M.Tech Project Stage 1 Report} \vspace{1cm} \\
+\textit{Submitted in partial fulfillment of the requirements} \\ \textit{for the degree of}  \\ \vspace{1cm} \textbf{Master of Technology} \\ \vspace{1cm} by }
+\author{ \textbf{Kurien Zacharia}  \\ 
+\vspace{1.5cm}
+\textbf{Roll No: 143059002 }}
+
+\begin{document}
+
+
+ 
+%\today
+\maketitle
+\newpage
+
+\newpage
+\pagenumbering{arabic}
+% \pagenumbering{roman}
+\pagestyle{plain}
+
+\include{abstract}
+
+\clearpage
+\section*{\center\LARGE{Acknowledgement}}
+
+  My sincere thanks to \textbf{Prof.Kameswari Chebrolu} and \textbf{Prof.Bhaskar Raman} for their guidance and supervision
+  which served to improve each step of the project. I would also like to thank the department and the office staff for their support and help. Last, but not the least, I would like to thank all my friends and family for their moral support.
+ 
+
+
+% Table of Contents
+\clearpage
+\tableofcontents
+
+\include{00_introduction}
+
+\include{10_quiz_stats}
+
+\include{11_code_support}
+
+\include{12_old-minor}
+
+\include{20_testing}
+
+\include{21_docker}
+
+\include{21_xml}
+
+\include{22_new_ui}
+ 
+ 
+ \section{Futurework}
+ 
+ \begin{itemize}
+  \item Code the newly created frontend in Django
+  \item Identifying methods for further control of WiFi traffic, and to scale the number of users to use any generic application.
+  
+ \end{itemize}
+
+\clearpage
+\bibliographystyle{plain}
+\bibliography{myreferences}
+
+
+\end{document}
+

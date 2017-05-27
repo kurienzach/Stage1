@@ -1,0 +1,24 @@
+\clearpage
+\section{Quiz Upload / Download From XML File} 
+\hspace{0.5cm} 
+
+
+\subsection{Problem Statement}
+	Instructor should be able to Upload / Download quiz as XML file
+
+\subsection{Why do we need this?}
+	Even though SAFE provides an intuitive UI to create and edit quiz, sometimes instructors will have a template of their quiz and would like to use it as a starting point. Using an xml file as the template instructors can upload the template and then use the UI to make edits in the quiz.\\
+	
+	XML download also allows to create backups of the quiz
+
+\subsection{Implementation}
+	We use the ElementTree library for XML parsing in Python.
+
+    \begin{itemize}
+        \item Postgres Container - Runs PostgreSQL version 9.5
+        \item Postgres Data Container - This container stores the postgres data files. This is a requirement of Docker containers to persist the database to the disk between runs of containers
+        \item Redis Container - Runs redis version 3.2 (used as a cache and broker for celery)
+        \item Web Container - This is a container created from scratch and has all the necessary web server related packages like nginx, django, nodejs, uwsgi etc.
+	\end{itemize}
+ 
+ 	

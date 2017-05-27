@@ -1,0 +1,27 @@
+\clearpage
+\section{Docker Containers for SAFE} 
+\hspace{0.5cm} 
+
+
+\subsection{Problem Statement}
+	Create docker containers for the production and developement setup of SAFE
+
+\subsection{Why do we need this?}
+	Installating and configuring all the requirements to run SAFE took around 3-4 hours. On top of that on production servers there were version conflicts for some of the requirements making the setup of SAFE very complicated and error prone. 
+
+\subsection{Design}
+	Docker containers unlike VM's are not full operating systems. Instead only the libraries and settings required for the software to work are needed. There are much lighter than VM's and has almost bare metal performance. Containers are isolated from the host and with other containers. So docker container run same everwhere irrespective of where it is deployed.\\
+
+	Once Docker containers are setup up SAFE can be installed and configured with just one command reducing the time taken to approximately 30 minutes
+
+\subsection{Implementation}
+	SAFE requires two different setups for the production mode and developement mode. Therefore two docker configurations was created for them. The docker setup for SAFE includes the following containers
+
+    \begin{itemize}
+        \item Postgres Container - Runs PostgreSQL version 9.5
+        \item Postgres Data Container - This container stores the postgres data files. This is a requirement of Docker containers to persist the database to the disk between runs of containers
+        \item Redis Container - Runs redis version 3.2 (used as a cache and broker for celery)
+        \item Web Container - This is a container created from scratch and has all the necessary web server related packages like nginx, django, nodejs, uwsgi etc.
+	\end{itemize}
+ 
+ 	

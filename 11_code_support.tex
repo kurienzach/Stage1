@@ -1,0 +1,23 @@
+\clearpage
+\section{Code Snippet and Indentation Support} 
+\hspace{0.5cm} 
+    
+   
+\subsection{Problem statement}
+	Support indentation and code blocks in question text
+
+\subsection{Why do we need this?}
+	Many CS courses requires code snippets to be included in the questions. Without proper indentation and code blocks support reading of code snippets is very difficult especially on a mobile device 
+
+\subsection{Design}
+	Since the app displays the question text inside a web view, $\langle pre \rangle$ tags can be used to provide indentation support for code blocks. 
+
+\subsection{Implementation}
+	Support for $\langle pre \rangle$ tags is implemented by modifications in the following places
+
+    \begin{enumerate}
+        \item Change in quiz template parsing to support $\langle pre \rangle$ tags\\ 
+        The normal logic during parsing of the the quiz template file is to trim all the extra spaces in each line. But for the contents inside the pre tag we want to keep the contents as such without trimming the spaces. We parse the quiz template file line by line and we use a flag to decide if the current line needs to be trimmed. The flag is set when a '$\langle pre \rangle$' tag is seen and unset when the '$\langle /pre \rangle$' tag is seen
+        \item Add CSS styles for $\langle pre \rangle$ tag in the frontend, and in the android app\\
+        CSS styes are added to make the code block look better, and use monospace fonts
+    \end{enumerate}	

@@ -1,0 +1,71 @@
+// Manual Grading type question
+{
+  "id":3708,
+  "question_no":"1",
+  "quiz":473,
+  "marks":2.5,
+  "type":"5",
+  "question":"What is the Capital of India ?\\nYou Must Know it",
+  "options":"[]",
+  "answer":"[]",
+  "has_image":0,
+  "reason_text_len":10,
+  "require_img_capture":0
+}
+
+// Manual Grading type question
+{
+  ..
+  "type":"6",
+  "question":"Find the output of the following program<pre>\nint main() {
+    \n\tcout<<\"Hello\";\n\t{\n\t\tcout<<\"New block\";\n\t}\n}\n\\n<\/pre>",
+  "options":"[]",
+  "answer":"[\"Delhi\",\"New Delhi\"]",
+        ..
+}
+
+// Integer Type Question
+{
+  ..
+  "question":"What is 1 + 1 ?",
+  "options":"[]",
+  "answer":"[2]",
+  "type":"3",
+  ..
+}
+
+// Single Choice Question
+{
+  ..
+  "question":"Who is called as father of Nation ?",
+  "options":"[{\"id\":\"a\",\"text\":\"Jawahar Lal Nehru\"},
+  {\"id\":\"b\",\"text\":\"Mahatma Gandhi\"},
+  {\"id\":\"c\",\"text\":\"Atal Bihari Vajpayee\"},
+  {\"id\":\"d\",\"text\":\"Arvind Kejriwal\"}]",
+  "answer":"[\"b\"]",
+  "type":"1",
+  ..
+}
+
+// Multiple correct answer question
+{
+  ..
+  "question":"Chose the correct answers :",
+  "options":"[{\"id\":\"a\",\"text\":\"Correct Answer\"},
+  {\"id\":\"b\",\"text\":\"Wrong Answer\"},
+  {\"id\":\"c\",\"text\":\"Correct Answer\"},
+  {\"id\":\"d\",\"text\":\"Wrong Answer\"}]",
+  "answer":"[\"a\",\"c\"]",
+  ..
+}
+
+// Floating point answer question
+
+{
+  ..
+  "question":"What is value of PI ?",
+  "options":"[]",
+  "answer":"[3.14,3.15]",
+  "type":"4",
+  "..
+}
